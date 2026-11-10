@@ -107,6 +107,88 @@ pre i{font-style:normal}.k{color:#4d82ff}.s{color:#5bd46a}.c{color:#6c6c7a;font-
  #mt{display:inline-block}.t1,.cta{display:none}.r1,.t2{padding:0 12px}.search{flex:1;width:auto}.logo{margin-right:0}
  #content{padding:24px 18px 60px}
 }
+
+/* Boss Fight */
+.boss-wrap{display:grid;gap:18px;margin:18px 0}
+.boss-arena{background:radial-gradient(ellipse at 50% 0%,#38205f 0%,#17121f 48%,#101012 100%);border:1px solid #5b3a8a;border-radius:16px;padding:22px;position:relative;overflow:hidden}
+.boss-top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.boss-tag{font-size:.78rem;letter-spacing:.12em;color:#c3a5ff;text-transform:uppercase}
+.boss-title{font-size:1.45rem;font-weight:700}
+.boss-monster{font-size: clamp(4rem,10vw,6rem);text-align:center;line-height:1.3;filter:drop-shadow(0 8px 18px #0009);transition:transform .2s}
+.boss-monster.hit{animation:bossHit .35s}
+@keyframes bossHit{0%,100%{transform:translateX(0) scale(1)}25%{transform:translateX(-12px) scale(1.08)}75%{transform:translateX(12px) scale(.96)}}
+.boss-bars{display:grid;gap:10px;max-width:620px;margin:0 auto}
+.boss-barline{display:flex;justify-content:space-between;font-size:.85rem;color:#d7d2e2}
+.boss-health{height:13px;background:#302b38;border-radius:99px;overflow:hidden}
+.boss-health i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#ff4d6d,#ff9b62);transition:width .35s}
+.player-health i{background:linear-gradient(90deg,#3ddc97,#62c8ff)}
+.boss-stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:15px}
+.boss-stat{background:#ffffff0d;border:1px solid #ffffff18;border-radius:10px;padding:7px 12px;font-size:.85rem}
+.boss-question{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:14px}
+.boss-qhead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.boss-difficulty{font-size:.78rem;font-weight:700;border-radius:99px;padding:4px 10px}
+.boss-difficulty.easy{color:#6ee7a8;background:#3ddc971c}
+.boss-difficulty.medium{color:#ffd27a;background:#ffbd591c}
+.boss-difficulty.hard{color:#ff8da0;background:#ff6b811c}
+.boss-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.boss-options button{text-align:left;padding:12px}
+.boss-options button.correct{border-color:var(--ok);background:#3ddc9722}
+.boss-options button.wrong{border-color:var(--err);background:#ff6b8122}
+.boss-options button:disabled{opacity:1}
+.boss-feedback{min-height:28px;color:#c5c5d0}
+.boss-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.boss-log{font-size:.9rem;color:var(--muted);min-height:1.5em}
+.boss-start{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+@media(max-width:600px){.boss-options{grid-template-columns:1fr}.boss-arena{padding:16px}}
+
+
+/* Motion polish: transições suaves e discretas */
+:root{scroll-behavior:smooth}
+body{background-image:radial-gradient(ellipse at 8% 92%,#5721a51c,transparent 34%),radial-gradient(ellipse at 94% 8%,#12c9c01a,transparent 32%)}
+button,a,.card,.box,.callout,.boss-stat,.boss-question,.boss-arena{transition:transform .22s cubic-bezier(.2,.75,.25,1),border-color .22s ease,background-color .22s ease,box-shadow .22s ease,opacity .22s ease}
+.hd{animation:uiDrop .55s cubic-bezier(.2,.75,.25,1) both}
+#side{animation:uiSlideRight .55s .06s cubic-bezier(.2,.75,.25,1) both}
+#content{animation:uiFade .65s .08s ease both}
+.chat{animation:uiSlideLeft .55s .12s cubic-bezier(.2,.75,.25,1) both}
+@keyframes uiDrop{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes uiSlideRight{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:translateX(0)}}
+@keyframes uiSlideLeft{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:translateX(0)}}
+@keyframes uiFade{from{opacity:0}to{opacity:1}}
+@keyframes pageEnter{from{opacity:0;transform:translateY(13px) scale(.995);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+.page.on{animation:pageEnter .42s cubic-bezier(.2,.75,.25,1) both}
+.page.on .ph{animation:uiFade .48s .05s ease both}
+.page.on h3,.page.on p,.page.on ul,.page.on table,.page.on pre,.page.on .callout,.page.on .diag,.page.on .demo,.page.on .grid3,.page.on .boss-wrap{animation:uiFade .42s ease both}
+.page.on .grid3 .card:nth-child(1){animation:uiFade .4s .04s both}
+.page.on .grid3 .card:nth-child(2){animation:uiFade .4s .09s both}
+.page.on .grid3 .card:nth-child(3){animation:uiFade .4s .14s both}
+.page.on .grid3 .card:nth-child(4){animation:uiFade .4s .19s both}
+#side a{transition:background .2s ease,color .2s ease,transform .2s ease,padding-left .2s ease}
+#side a:hover{transform:translateX(3px);padding-left:1.25em}
+.t1 a,.t2 a{transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+.t1 a:hover,.t2 a:hover{transform:translateY(-1px)}
+a.card{transition:transform .22s cubic-bezier(.2,.75,.25,1),border-color .22s ease,box-shadow .22s ease}
+a.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #0003}
+button:hover{transform:translateY(-1px);box-shadow:0 5px 16px #0003}
+button:active{transform:translateY(1px) scale(.98);box-shadow:none}
+input,textarea{transition:border-color .2s ease,box-shadow .2s ease}
+input:focus,textarea:focus{box-shadow:0 0 0 3px #2563ff20}
+#sr{transform-origin:top;animation:searchPop .18s ease both}
+@keyframes searchPop{from{opacity:0;transform:translateY(-5px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+.m{animation:messageIn .28s cubic-bezier(.2,.75,.25,1) both}
+@keyframes messageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.boss-arena{box-shadow:0 18px 55px #0004}
+.boss-monster{animation:bossFloat 3.2s ease-in-out infinite}
+@keyframes bossFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.boss-health i{transition:width .55s cubic-bezier(.2,.75,.25,1)}
+.boss-stat{transition:transform .2s ease,background .2s ease}
+.boss-stat:hover{transform:translateY(-2px);background:#ffffff15}
+.boss-options button{transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.boss-options button:not(:disabled):hover{transform:translateY(-2px);border-color:var(--blue)}
+.boss-monster.hit{animation:bossHit .35s, bossFloat 3.2s .35s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
 </style>
 </head>
 <body>
@@ -353,6 +435,36 @@ foreach (var v in frota)
 <div class="card"><h3>📋 Sistemas de gestão</h3><p>Escolas, hospitais e armazéns.</p></div>
 </div>
 </article>
+
+<article class="page" id="bossfight" data-t="Boss Fight" data-g="Prática">
+<header class="ph"><h1>Boss Fight: Mestre da POO</h1><p>Responde a perguntas de C# e POO para derrotar o boss. Quanto maior a dificuldade, maior o dano causado!</p></header>
+<div class="callout"><p><b>Como jogar:</b> uma resposta certa ataca o boss. Perguntas fáceis causam <b>10 de dano</b>, médias <b>20</b> e difíceis <b>30</b>. Se errares, perdes uma vida.</p></div>
+<div class="boss-wrap">
+  <section class="boss-arena" aria-label="Arena do boss">
+    <div class="boss-top"><div><div class="boss-tag">BOSS FINAL · NÍVEL 1</div><div class="boss-title">Guardião do Código</div></div><span class="boss-tag" id="boss-state">À espera de um desafiante</span></div>
+    <div class="boss-monster" id="boss-monster">👾</div>
+    <div class="boss-bars">
+      <div class="boss-barline"><b>Vida do boss</b><span id="boss-hp-text">100 / 100 HP</span></div>
+      <div class="boss-health"><i id="boss-hp-bar"></i></div>
+      <div class="boss-barline"><b>As tuas vidas</b><span id="player-hp-text">❤️❤️❤️</span></div>
+      <div class="boss-health player-health"><i id="player-hp-bar"></i></div>
+    </div>
+    <div class="boss-stats">
+      <span class="boss-stat">⚔️ Dano causado: <b id="boss-damage">0</b></span>
+      <span class="boss-stat">✅ Acertos: <b id="boss-score">0</b></span>
+      <span class="boss-stat">❌ Erros: <b id="boss-errors">0</b></span>
+    </div>
+  </section>
+  <section class="boss-question">
+    <div class="boss-qhead"><b id="boss-round">Prepara-te para a batalha</b><span class="boss-difficulty easy" id="boss-diff">Fácil · 10 dano</span></div>
+    <h3 id="boss-question-text" style="margin:0">Estás pronto para enfrentar o Guardião do Código?</h3>
+    <div class="boss-options" id="boss-options"></div>
+    <p class="boss-feedback" id="boss-feedback" aria-live="polite">Carrega em «Começar batalha» para receber a primeira pergunta.</p>
+    <div class="boss-actions"><span class="boss-log" id="boss-log">Boa sorte!</span><div class="boss-start"><button class="pri" id="boss-start">Começar batalha</button><button id="boss-next" hidden>Próxima pergunta →</button></div></div>
+  </section>
+</div>
+</article>
+
 <article class="page" id="questionario" data-t="Questionário final" data-g="Final"><header class="ph"><h1>Questionário final</h1><p>Testa o que aprendeste.</p></header>
 
 <p>Testa o que aprendeste. Recebes feedback logo após cada resposta.</p>
@@ -497,6 +609,95 @@ $('#hack').onclick=()=>{const o=$('#eout');o.className='out err';o.textContent="
 /* Demo: polimorfismo */
 const SONS={'Cão':'Au au!','Gato':'Miau!','Vaca':'Muuu!'};
 $$('[data-a]').forEach(b=>b.onclick=()=>{$('#pout').textContent=`animal.EmitirSom() → "${SONS[b.dataset.a]}"  (${b.dataset.a})`});
+
+
+/* Boss Fight: perguntas com dano por dificuldade */
+const BOSS_QUESTIONS = [
+ {d:"easy",q:"O que é uma classe em C#?",o:["Um molde para criar objetos","Uma instância concreta","Um ciclo de repetição","Uma variável"],a:0},
+ {d:"easy",q:"Qual palavra-chave cria um novo objeto?",o:["class","new","this","base"],a:1},
+ {d:"easy",q:"Qual destes é um tipo de dado válido em C#?",o:["integer","text","string","character"],a:2},
+ {d:"easy",q:"O que representa um objeto?",o:["Um ficheiro","Uma instância de uma classe","Um comentário","Um namespace"],a:1},
+ {d:"medium",q:"Que pilar protege os dados internos de um objeto?",o:["Herança","Abstração","Encapsulamento","Polimorfismo"],a:2},
+ {d:"medium",q:"Que símbolo se utiliza para indicar herança em C#?",o:["->",":","extends","::"],a:1},
+ {d:"medium",q:"Qual é a função de um construtor?",o:["Apagar objetos","Inicializar um objeto","Criar um ciclo","Terminar o programa"],a:1},
+ {d:"medium",q:"Que modificador limita o acesso a um membro à própria classe?",o:["public","private","static","virtual"],a:1},
+ {d:"hard",q:"Que combinação permite redefinir um método herdado em C#?",o:["static e const","private e public","virtual e override","new e using"],a:2},
+ {d:"hard",q:"O que acontece quando tentas instanciar diretamente uma classe abstract?",o:["O objeto é criado normalmente","O compilador apresenta um erro","A classe transforma-se numa interface","O método é executado duas vezes"],a:1},
+ {d:"hard",q:"No polimorfismo, o método override escolhido depende principalmente de quê?",o:["Do nome da variável","Do tipo real do objeto em execução","Da ordem dos ficheiros","Do número de propriedades"],a:1},
+ {d:"hard",q:"Qual é a principal ideia da abstração?",o:["Mostrar todos os detalhes internos","Duplicar métodos","Esconder o essencial","Mostrar apenas características relevantes e ocultar detalhes desnecessários"],a:3}
+];
+const BOSS_DAMAGE={easy:10,medium:20,hard:30};
+const BOSS_LABEL={easy:"Fácil",medium:"Média",hard:"Difícil"};
+let bossHP=100,playerHP=3,bossScore=0,bossErrors=0,bossDamage=0,bossCurrent=null,bossAnswered=false,bossDeck=[];
+const bossEl=id=>document.getElementById(id);
+const bossShuffle=a=>[...a].sort(()=>Math.random()-.5);
+function bossUpdate(){
+  bossEl("boss-hp-text").textContent=`${bossHP} / 100 HP`;
+  bossEl("boss-hp-bar").style.width=`${bossHP}%`;
+  bossEl("player-hp-text").textContent="❤️".repeat(playerHP)+"🖤".repeat(3-playerHP);
+  bossEl("player-hp-bar").style.width=`${playerHP/3*100}%`;
+  bossEl("boss-damage").textContent=bossDamage;
+  bossEl("boss-score").textContent=bossScore;
+  bossEl("boss-errors").textContent=bossErrors;
+}
+function bossEnd(won){
+  bossEl("boss-state").textContent=won?"Boss derrotado!":"Fim de jogo";
+  bossEl("boss-monster").textContent=won?"🏆":"💀";
+  bossEl("boss-question-text").textContent=won?"Vitória! Dominaste os conceitos de POO.":"O Guardião venceu desta vez. Continua a estudar e tenta novamente!";
+  bossEl("boss-options").innerHTML="";
+  bossEl("boss-feedback").textContent=won?`Conseguiste derrotar o boss com ${bossScore} respostas certas!`:`Causaste ${bossDamage} de dano antes de perderes.`;
+  bossEl("boss-next").hidden=true;
+  bossEl("boss-start").textContent="Jogar novamente";
+  bossEl("boss-start").hidden=false;
+}
+function bossLoadQuestion(){
+  if(bossHP<=0){bossEnd(true);return}
+  if(playerHP<=0){bossEnd(false);return}
+  if(!bossDeck.length)bossDeck=bossShuffle(BOSS_QUESTIONS);
+  bossCurrent=bossDeck.pop();bossAnswered=false;
+  const diff=bossCurrent.d,damage=BOSS_DAMAGE[diff];
+  bossEl("boss-round").textContent=`Pergunta ${bossScore+bossErrors+1}`;
+  bossEl("boss-diff").className=`boss-difficulty ${diff}`;
+  bossEl("boss-diff").textContent=`${BOSS_LABEL[diff]} · ${damage} dano`;
+  bossEl("boss-question-text").textContent=bossCurrent.q;
+  bossEl("boss-options").innerHTML=bossCurrent.o.map((_,i)=>`<button type="button" data-answer="${i}"></button>`).join("");
+  [...bossEl("boss-options").children].forEach((b,i)=>{
+    b.textContent=bossCurrent.o[i];
+    b.addEventListener("click",()=>bossAnswer(i));
+  });
+  bossEl("boss-feedback").textContent="Escolhe a resposta certa para atacar!";
+  bossEl("boss-next").hidden=true;
+  bossEl("boss-log").textContent="O boss está à tua espera…";
+}
+function bossAnswer(choice){
+  if(bossAnswered||!bossCurrent)return;
+  bossAnswered=true;
+  const correct=choice===bossCurrent.a;
+  const buttons=[...bossEl("boss-options").children];
+  buttons.forEach((b,i)=>{b.disabled=true;if(i===bossCurrent.a)b.classList.add("correct");if(i===choice&&!correct)b.classList.add("wrong")});
+  if(correct){
+    const damage=BOSS_DAMAGE[bossCurrent.d];
+    bossHP=Math.max(0,bossHP-damage);bossScore++;bossDamage+=damage;
+    bossEl("boss-feedback").innerHTML=`<span class="ok">Acertaste! Causaste ${damage} de dano ao boss. ⚔️</span>`;
+    bossEl("boss-log").textContent=`Ataque ${BOSS_LABEL[bossCurrent.d].toLowerCase()}: -${damage} HP`;
+    bossEl("boss-monster").classList.remove("hit");void bossEl("boss-monster").offsetWidth;bossEl("boss-monster").classList.add("hit");
+  }else{
+    playerHP--;bossErrors++;
+    bossEl("boss-feedback").innerHTML=`<span class="err">Resposta errada! A resposta certa era: ${bossCurrent.o[bossCurrent.a]}. Perdeste uma vida.</span>`;
+    bossEl("boss-log").textContent="O boss contra-atacou! -1 vida";
+  }
+  bossUpdate();
+  if(bossHP<=0||playerHP<=0){bossEl("boss-next").hidden=true;bossEnd(bossHP<=0)}
+  else bossEl("boss-next").hidden=false;
+}
+function bossReset(){
+  bossHP=100;playerHP=3;bossScore=0;bossErrors=0;bossDamage=0;bossDeck=bossShuffle(BOSS_QUESTIONS);
+  bossUpdate();bossEl("boss-state").textContent="Batalha em curso";bossEl("boss-monster").textContent="👾";
+  bossEl("boss-start").hidden=true;bossLoadQuestion();
+}
+bossEl("boss-start").addEventListener("click",bossReset);
+bossEl("boss-next").addEventListener("click",bossLoadQuestion);
+bossUpdate();
 
 /* Questionário */
 const Q=[
