@@ -3,144 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>POO em C# · Apresentação</title>
+<title>POO em C# · Guia</title>
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgeG1sbnM6YzJwYT0iaHR0cDovL2MycGEub3JnL21hbmlmZXN0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM0ZjhjZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM5YjZiZmYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0idXJsKCNnKSIvPjx0ZXh0IHg9IjMyIiB5PSI0MyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmIj5DIzwvdGV4dD48bWV0YWRhdGE+PGMycGE6bWFuaWZlc3Q+QUFBV2dtcDFiV0lBQUFBZWFuVnRaR015Y0dFQUVRQVFnQUFBcWdBNG0zRURZekp3WVFBQUFCWmNhblZ0WWdBQUFFZHFkVzFrWXpKdFlRQVJBQkNBQUFDcUFEaWJjUU4xY200Nll6SndZVG81TkRjNE9XWTJPQzFtWlRkaExUUXpPRGd0WWpkaVpTMHhabUV5TXpSalltVmpNMklBQUFBRGwycDFiV0lBQUFBcGFuVnRaR015WVhNQUVRQVFnQUFBcWdBNG0zRURZekp3WVM1aGMzTmxjblJwYjI1ekFBQUFBTHhxZFcxaUFBQUFSR3AxYldSalltOXlBQkVBRUlBQUFLb0FPSnR4RTJNeWNHRXVhVzVuY21Wa2FXVnVkQzUyTXdBQUFBQVlZekp6YUpqZEgxc1lWaG5vZ0dZU1Z5UWVBb0lBQUFCd1kySnZjcU5wWkdNNlptOXliV0YwYldsdFlXZGxMM04yWnl0NGJXeHFhVzV6ZEdGdVkyVkpSSGdzZUcxd09tbHBaRG94TVdOaE9UazBNUzB5T0RjeExUUmxNV1V0WVRZME1pMHhaVE14TVdVM09XSTJPRE5zY21Wc1lYUnBiMjV6YUdsd2FIQmhjbVZ1ZEU5bUFBQUI0bXAxYldJQUFBQkJhblZ0WkdOaWIzSUFFUUFRZ0FBQXFnQTRtM0VUWXpKd1lTNWhZM1JwYjI1ekxuWXlBQUFBQUJoak1uTm9zUUVmTFlJK1pXdkZwMGppbTVVS1J3QUFBWmxqWW05eW9tZGhZM1JwYjI1emdxSm1ZV04wYVc5dWEyTXljR0V1YjNCbGJtVmthbkJoY21GdFpYUmxjbk9oYTJsdVozSmxaR2xsYm5SemdhSmpkWEpzZUMxelpXeG1JMnAxYldKbVBXTXljR0V1WVhOelpYSjBhVzl1Y3k5ak1uQmhMbWx1WjNKbFpHbGxiblF1ZGpOa2FHRnphRmdnRUc2clpXWlpqR0puYWl0OEdYTno0dVpMQk1nVnJrZU4rdkhSWExmaGROMmtabUZqZEdsdmJuZ2RZMjl0TG1GdWRHaHliM0JwWXk1amJHRjFaR1V1Y0hKdmRtbGtaV1JxY0dGeVlXMWxkR1Z5YzZGNEgyTnZiUzVoYm5Sb2NtOXdhV011YjNKcFoybHVMV052Ym1acFpHVnVZMlZuZFc1cmJtOTNibXRrWlhOamNtbHdkR2x2Ym5obVEyeGhkV1JsSUhCeWIzWnBaR1ZrSUhSb2FYTWdabWxzWlNCaGRDQjBhR1VnY21WeGRXVnpkQ0J2WmlCaElIVnpaWElnWVc1a0lHMWhlU0JvWVhabElHTnlaV0YwWldRZ2IzSWdiVzlrYVdacFpXUWdkR2hsSUdacGJHVWdZMjl1ZEdWdWRITXViWE52Wm5SM1lYSmxRV2RsYm5TaFpHNWhiV1ZtUTJ4aGRXUmxjbUZzYkVGamRHbHZibk5KYm1Oc2RXUmxaUFVBQUFESWFuVnRZZ0FBQUVCcWRXMWtZMkp2Y2dBUkFCQ0FBQUNxQURpYmNSTmpNbkJoTG1oaGMyZ3VaR0YwWVFBQUFBQVlZekp6YUx0WWdxSGo0UlRYS0JPNWs1aTZRdTBBQUFDQVkySnZjcVZqWVd4blpuTm9ZVEkxTm1Od1lXUk1BQUFBQUFBQUFBQUFBQUFBWkdoaGMyaFlJQ1pDc042WkZ1cXUwa3JLcUxvRTVSUk41ZkdzdlJEUDBNaG5NUXY5YTBUUFpHNWhiV1Z1YW5WdFltWWdiV0Z1YVdabGMzUnFaWGhqYkhWemFXOXVjNEdpWlhOMFlYSjBHUUhDWm14bGJtZDBhQmtlQkFBQUFqNXFkVzFpQUFBQUoycDFiV1JqTW1Oc0FCRUFFSUFBQUtvQU9KdHhBMk15Y0dFdVkyeGhhVzB1ZGpJQUFBQUNEMk5pYjNLbFkyRnNaMlp6YUdFeU5UWnBjMmxuYm1GMGRYSmxlRTF6Wld4bUkycDFiV0ptUFM5ak1uQmhMM1Z5Ympwak1uQmhPamswTnpnNVpqWTRMV1psTjJFdE5ETTRPQzFpTjJKbExURm1ZVEl6TkdOaVpXTXpZaTlqTW5CaExuTnBaMjVoZEhWeVpXcHBibk4wWVc1alpVbEVlQ3g0YlhBNmFXbGtPbVprWm1Ka1kyVmlMVEU0Tm1FdE5HSTFNeTFoWldFMUxXSm1NV1l4WVdRMlpEYzRaSEpqY21WaGRHVmtYMkZ6YzJWeWRHbHZibk9Eb21OMWNteDRMWE5sYkdZamFuVnRZbVk5WXpKd1lTNWhjM05sY25ScGIyNXpMMk15Y0dFdWFXNW5jbVZrYVdWdWRDNTJNMlJvWVhOb1dDQVFicXRsWmxtTVltZHFLM3daYzNQaTVrc0V5Qld1UjQzNjhkRmN0K0YwM2FKamRYSnNlQ3B6Wld4bUkycDFiV0ptUFdNeWNHRXVZWE56WlhKMGFXOXVjeTlqTW5CaExtRmpkR2x2Ym5NdWRqSmthR0Z6YUZnZ1BsMFg0NDl3QzdKcldGSkFmR3Q4VWYwb3JiMWNXaE1pamYwYlFkUFgybmFpWTNWeWJIZ3BjMlZzWmlOcWRXMWlaajFqTW5CaExtRnpjMlZ5ZEdsdmJuTXZZekp3WVM1b1lYTm9MbVJoZEdGa2FHRnphRmdnRG1JNzlEeUxpS0ZjTXNTekg5K29hTGJ0VENpOHNIWWkzRTBmNlBmdkJvZDBZMnhoYVcxZloyVnVaWEpoZEc5eVgybHVabStqWkc1aGJXVnZRVzUwYUhKdmNHbGpJRVpwYkdWelozWmxjbk5wYjI1bE1TNHdMakJyYzNCbFkxWmxjbk5wYjI1bE1pNDBMakFBQUJBNGFuVnRZZ0FBQUNocWRXMWtZekpqY3dBUkFCQ0FBQUNxQURpYmNRTmpNbkJoTG5OcFoyNWhkSFZ5WlFBQUFCQUlZMkp2Y3RLRVdRSVNvZ0VtR0NGWkFnb3dnZ0lHTUlJQmphQURBZ0VDQWhSQTVhQUs3c0k1MEw2NGcvb0dRZ1U5WjFVVEFEQUtCZ2dxaGtqT1BRUURBekJKTVJjd0ZRWURWUVFLRXc1QmJuUm9jbTl3YVdNc0lGQkNRekV1TUN3R0ExVUVBeE1sUVc1MGFISnZjR2xqSUVOdmJuUmxiblFnUTNKbFpHVnVkR2xoYkhNZ1VtOXZkQ0JEUVRBZUZ3MHlOakE0TURjeE9EUXpOVFphRncweU9EQTRNRFl4T1RRek5UWmFNRVF4RnpBVkJnTlZCQW9URGtGdWRHaHliM0JwWXl3Z1VFSkRNU2t3SndZRFZRUURFeUJCYm5Sb2NtOXdhV01nUTJ4aGRXUmxJRU52Ym5SbGJuUWdVMmxuYm1sdVp6QlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJKaDZDbXZMVUJnRkZOVTB2VUtsT1Z0RTZkamQxN0w1U3V3WDBMZW1GaXNCTTNka2QvM2N5anhGQTNRbzVTNDZmWDAvaWhZMFZaN21mYjlLRjcwM3Q1T2pXREJXTUE0R0ExVWREd0VCL3dRRUF3SUhnREFWQmdOVkhTVUVEakFNQmdvckJnRUVBWVBvWGdJQk1Bd0dBMVVkRXdFQi93UUNNQUF3SHdZRFZSMGpCQmd3Rm9BVXpsSGlCSUZPWkZzaitPUEV6NW8rbk1IWFhNSXdDZ1lJS29aSXpqMEVBd01EWndBd1pBSXdNWE1kRko0QmV0TExWWTdPUnVFOW5vcWJiQVpPWm4vYUFyWHlUd0ZBWmZLclB6eEYydlBvSk5mMStVQ2RnMVhHQWpCd1gxemQ5V0dxWWtxbUw1U0ZxdzFReVNqcjF6SmZwSk05KzFyZER3U1BMTU9QT2pLdWlYam9VL3BVVWVHOVJ3bWhZM0JoWkZrTm5nQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUFpZUUNUVUlaeWUvZXk3MnY2SU5IRTFhVGlwclRWUkVaWjdkYmFzcFhmSEk3eXY5cVJXQWR0K2M0UkFuakoyOUh0ZkJadjFDakVoYy91MGIzR3lDcHdxaFdzPTwvYzJwYTptYW5pZmVzdD48L21ldGFkYXRhPjwvc3ZnPgo=">
 <style>
-:root{--bg:#0b0b10;--panel:#14141c;--p2:#1b1b26;--text:#ececf4;--muted:#9a9ab0;--blue:#4f8cff;--purple:#9b6bff;--line:#2a2a3a;--ok:#3ddc97;--err:#ff6b81;--g:linear-gradient(120deg,var(--blue),var(--purple))}
+:root{--bg:#0b0b0d;--panel:#141416;--p2:#1c1c20;--line:#26262c;--text:#f2f2f5;--muted:#9a9aa6;--blue:#2563ff;--purple:#9b6bff;--ok:#3ddc97;--err:#ff6b81;--g:linear-gradient(120deg,#2563ff,#9b6bff)}
 *{box-sizing:border-box;margin:0}
 html,body{height:100%}
-body{background:radial-gradient(900px 500px at 85% -10%,#3a2a7a55,transparent),radial-gradient(700px 400px at -10% 110%,#1d3a7a44,transparent),var(--bg);color:var(--text);font:16px/1.6 system-ui,"Segoe UI",Roboto,sans-serif;overflow:hidden}
-body.present{font-size:19px}
-header{position:fixed;inset:0 0 auto;height:56px;display:flex;align-items:center;gap:12px;padding:0 18px;background:#0b0b10dd;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:20}
-body.present header{display:none}
-.logo{font-weight:800;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sp{flex:1}.hint{color:var(--muted);font-size:.85rem}
-button{font:inherit;color:var(--text);background:var(--p2);border:1px solid var(--line);border-radius:10px;padding:.4em .9em;cursor:pointer;transition:.2s}
-button:hover{border-color:var(--purple);transform:translateY(-1px)}
-button.pri{background:var(--g);border:0;color:#fff}
-button:disabled{opacity:.35;cursor:default;transform:none}
-#menu{position:fixed;top:60px;left:12px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px;display:none;z-index:25;max-height:70vh;overflow:auto}
-#menu.open{display:block}
-#menu a{display:block;padding:.35em .9em;border-radius:8px;color:var(--muted);cursor:pointer}
-#menu a:hover,#menu a.cur{background:var(--p2);color:var(--text)}
-#prog{position:fixed;top:56px;left:0;height:3px;background:var(--g);width:0;transition:width .35s;z-index:21}
-body.present #prog{top:0}
-main{position:fixed;inset:59px 0 56px}
-body.present main{top:3px}
-footer{position:fixed;inset:auto 0 0;height:56px;display:flex;align-items:center;gap:10px;padding:0 18px;background:#0b0b10dd;border-top:1px solid var(--line);z-index:20}
-#cnt{color:var(--muted);font-variant-numeric:tabular-nums}
-.slide{position:absolute;inset:0;display:none;overflow-y:auto;padding:clamp(16px,3.5vw,48px) clamp(16px,6vw,96px)}
-.slide.on{display:block}
-.in{max-width:1100px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;justify-content:center;gap:16px}
-.in.center{align-items:center;text-align:center}
-.in>*{animation:up .55s both}.in>:nth-child(2){animation-delay:.07s}.in>:nth-child(3){animation-delay:.14s}.in>:nth-child(4){animation-delay:.21s}.in>:nth-child(n+5){animation-delay:.28s}
-@keyframes up{from{opacity:0;transform:translateY(18px)}}
-h1{font-size:clamp(2.3rem,6vw,4.6rem);line-height:1.08;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
-h2{font-size:clamp(1.5rem,3.3vw,2.5rem);line-height:1.15}
-h2 span{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
-h3{font-size:1.05rem;color:#c9b8ff}
-p,li{color:var(--muted)}p b,li b{color:var(--text)}
-ul{padding-left:1.1em}li{margin:.2em 0}
-.tag{display:inline-block;padding:.2em .9em;border-radius:99px;background:#9b6bff22;color:#c9b8ff;border:1px solid #9b6bff55;font-size:.85rem;width:fit-content}
-.grid3,.grid4{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px;transition:.25s}
-.card:hover{border-color:var(--purple);transform:translateY(-3px)}
-.card .ic{font-size:1.6rem;display:block;margin-bottom:4px}
-.card[data-go]{cursor:pointer}
+body{background:var(--bg);color:var(--text);font:16px/1.7 system-ui,"Segoe UI",Roboto,sans-serif;overflow:hidden}
+a{color:inherit}
+.app{height:100vh;height:100dvh;display:flex;flex-direction:column}
+.hd{background:var(--panel);border-bottom:1px solid var(--line);flex:none;position:relative;z-index:50}
+.r1{height:60px;display:flex;align-items:center;gap:12px;padding:0 24px}
+.logo{display:flex;margin-right:14px}.logo img{width:32px;height:32px}
+.t1{display:flex;gap:6px}
+.t1 a{padding:.45em 1.1em;border-radius:10px;font-weight:500;text-decoration:none}
+.t1 a:hover{background:var(--p2)}.t1 a.cur{background:#2a2a30}
+.sp{flex:1}
+.search{position:relative;width:min(300px,38vw)}
+.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.search input{width:100%;height:42px;background:transparent;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:0 12px 0 40px;font:inherit}
+.search input:focus{outline:none;border-color:var(--blue)}
+#sr{display:none;position:absolute;top:48px;left:0;right:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px;box-shadow:0 12px 40px #000a}
+#sr a{display:flex;justify-content:space-between;gap:8px;padding:.45em .7em;border-radius:8px;text-decoration:none;font-size:.95rem}
+#sr a:hover{background:var(--p2)}#sr small,#sr p{color:var(--muted)}#sr p{padding:.5em .7em}
+.cta{background:var(--blue);color:#fff;text-decoration:none;font-weight:600;padding:.6em 1.2em;border-radius:10px}.cta:hover{filter:brightness(1.15)}
+.t2{display:flex;gap:8px;padding:0 24px;height:48px;overflow-x:auto}
+.t2 a{padding:0 24px;display:flex;align-items:center;text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.t2 a.cur{color:#4d82ff;border-color:var(--blue)}
+.body{flex:1;min-height:0;display:grid;grid-template-columns:260px minmax(0,1fr) 360px}
+.nochat .body{grid-template-columns:260px minmax(0,1fr)}.nochat .chat{display:none}
+#side{overflow:auto;padding:24px 14px;border-right:1px solid var(--line)}
+#side h5{font-size:.85rem;font-weight:500;color:var(--muted);padding:.3em 1em;margin:20px 0 4px}#side h5:first-child{margin-top:0}
+#side a{display:block;padding:.45em 1em;border-radius:8px;text-decoration:none;font-size:.95rem}
+#side a:hover{background:var(--p2)}#side a.cur{background:#1d2a4d;color:#8fb0ff}
+#content{overflow:auto;padding:36px 40px 70px}
+.inner{max-width:820px;margin:0 auto}
+.page{display:none}.page.on{display:block;animation:fd .3s}
+@keyframes fd{from{opacity:0}}
+.ph{margin-bottom:22px}.ph h1{font-size:clamp(1.8rem,3vw,2.3rem);line-height:1.2;font-weight:600}
+.page .ph p{color:var(--muted);font-size:1.1rem;margin-top:.4em}
+.page p{margin:.7em 0;color:#c5c5d0}.page li{color:#c5c5d0}.page ul{margin:.5em 0 .5em 1.2em}
+.page p b,.page li b,.page td b{color:#fff}
+.page h3{font-size:1.15rem;margin:1.6em 0 .2em;font-weight:600}
+.page code{background:var(--p2);border:1px solid var(--line);border-radius:6px;padding:.05em .4em;font:.88em ui-monospace,Menlo,Consolas,monospace;color:#9fbaff}
+.page pre,.demo,.diag,.tabwrap{margin:1.1em 0}
+table{width:100%;border-collapse:collapse;margin:1em 0;font-size:.95rem}
+th,td{text-align:left;padding:.6em .9em;border-bottom:1px solid var(--line)}th{color:#fff;font-weight:600}td{color:#c5c5d0}
+.callout{border-left:3px solid var(--blue);background:#2563ff14;border-radius:0 12px 12px 0;padding:8px 16px;margin:1.2em 0}
+.grid3{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin:1.2em 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;display:block;text-decoration:none;color:inherit}
+a.card:hover{border-color:var(--blue)}
+.page .card h3{margin:0 0 .2em;font-size:1rem}.card p{margin:0;font-size:.95rem}
 .card.good{border-color:#3ddc9755}.card.bad{border-color:#ff6b8155}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
-@media(max-width:860px){.cols{grid-template-columns:1fr}.hint{display:none}}
-.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:.25em .8em;border-radius:99px;background:var(--p2);border:1px solid var(--line);font-size:.88rem;color:var(--text)}
-pre{background:#08080d;border:1px solid var(--line);border-radius:12px;padding:14px 16px;overflow-x:auto;font:13px/1.55 ui-monospace,Menlo,Consolas,monospace;color:#d8d8e8}
-body.present pre{font-size:15px}
-.code{position:relative}.code button{position:absolute;top:8px;right:8px;font-size:12px;padding:.15em .6em}
-pre i{font-style:normal}.k{color:#c792ff}.s{color:#8be9a0}.c{color:#6c7086;font-style:italic}.t{color:#6fb1ff}.n{color:#ffb86b}
-.demo{background:var(--panel);border:1px dashed #9b6bff88;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px}
+button{font:inherit;color:var(--text);background:var(--p2);border:1px solid var(--line);border-radius:10px;padding:.4em .9em;cursor:pointer;transition:.2s}
+button:hover{border-color:var(--blue)}button.pri{background:var(--blue);border:0;color:#fff}button:disabled{opacity:.4;cursor:default}
+.ib{background:transparent;border:0;padding:.4em .6em;font-size:1.1rem}.ib:hover{background:var(--p2)}
+#mt{display:none}
+pre{background:#121214;border:1px solid var(--line);border-radius:12px;padding:14px 0;overflow-x:auto;font:13.5px/1.55 ui-monospace,Menlo,Consolas,monospace;color:#e4e4ec;counter-reset:l}
+pre .l{display:block;counter-increment:l;padding-right:16px;white-space:pre;min-height:1.55em}
+pre .l::before{content:counter(l);display:inline-block;width:2.6em;margin-right:1em;text-align:right;color:#5b5b68}
+.code{position:relative}.code button{position:absolute;top:8px;right:8px;font-size:12px;padding:.15em .6em;z-index:2}
+pre i{font-style:normal}.k{color:#4d82ff}.s{color:#5bd46a}.c{color:#6c6c7a;font-style:italic}.t{color:#ff4d6d}.n{color:#ffb86b}
+.demo{background:var(--panel);border:1px dashed #2563ff88;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px}
 .demo .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.demo input{background:#08080d;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:.4em .6em;width:100px;font:inherit}
+.demo input{background:#0b0b0d;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:.4em .6em;width:100px;font:inherit}
 .out{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9rem;min-height:1.5em}
 .ok{color:var(--ok)}.err{color:var(--err)}
 .bar{height:8px;background:var(--p2);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--g);transition:width .4s}
 .diag{display:flex;flex-direction:column;align-items:center;gap:6px}
-.box{background:var(--p2);border:1px solid #4f8cff77;border-radius:12px;padding:8px 16px;text-align:center;font-size:.9rem;color:var(--text)}
-.box small{display:block;color:var(--muted);font-size:.78rem}
-.box.cls{border-color:#9b6bff;background:#9b6bff1a}
+.box{background:var(--p2);border:1px solid #2563ff77;border-radius:10px;padding:8px 16px;text-align:center;font-size:.9rem}
+.box small{display:block;color:var(--muted);font-size:.78rem}.box.cls{border-color:var(--purple);background:#9b6bff1a}
 .row2{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.arr{color:var(--purple);font-size:1.3rem;line-height:1}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.tabs button.on{background:var(--g);border:0;color:#fff}
-.pane{display:none}.pane.on{display:block}.pane p{margin-top:8px}
-#quiz{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px}
-.opts{display:grid;gap:8px}.opts button{text-align:left}.opts button:disabled{opacity:1}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.tabs button.on{background:var(--blue);border:0;color:#fff}
+.pane{display:none}.pane.on{display:block}
+#quiz{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:12px}
+#quiz h3{margin:0}.opts{display:grid;gap:8px}.opts button{text-align:left}.opts button:disabled{opacity:1}
 .opts button.ok{border-color:var(--ok);background:#3ddc9722}.opts button.err{border-color:var(--err);background:#ff6b8122}
-.big{font-size:clamp(2rem,5vw,3.4rem)}
+#pn{display:flex;gap:14px;margin-top:48px}
+#pn a{flex:1;border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;background:var(--panel)}
+#pn a:hover{border-color:var(--blue)}#pn small{display:block;color:var(--muted)}#pn .r{text-align:right}
+.chat{background:#000;border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+.ch{display:flex;align-items:center;justify-content:space-between;padding:0 14px 0 20px;height:70px;flex:none;background:var(--panel);border-bottom:1px solid var(--line);font-size:1.25rem}
+#msgs{flex:1;overflow:auto;padding:20px;display:flex;flex-direction:column;gap:18px}
+#msgs::before{content:"";margin-top:auto}
+.m .mh{display:flex;gap:12px;font-size:.9rem;margin-bottom:6px;align-items:baseline}.m time{color:var(--muted);font-size:.85rem}
+.m .bub{background:#121214;border:1px solid #2a2a30;border-radius:10px;padding:10px 14px;width:fit-content;max-width:100%}
+.m.me{align-self:flex-end;max-width:88%}.m.me .mh{justify-content:space-between}
+.m.bot{display:grid;grid-template-columns:42px minmax(0,1fr)}
+.av{width:34px;height:34px;border-radius:50%;background:#6b7cff;display:flex;align-items:center;justify-content:center;color:#fff}
+#sug{display:flex;flex-wrap:wrap;gap:8px;padding:0 20px 8px}#sug button{font-size:.85rem;border-radius:99px;padding:.3em .9em;color:#c5c5d0}
+.cf{display:flex;margin:8px 20px 20px;border:1px solid var(--line);border-radius:12px;background:#101012}
+.cf input{flex:1;background:transparent;border:0;color:var(--text);padding:14px 16px;font:inherit;min-width:0}.cf input:focus{outline:none}
+.cf .send{margin:8px;background:#2a2a30;border:0;border-radius:8px;width:40px}
+@media(max-width:1179px){
+ .body,.nochat .body{grid-template-columns:260px minmax(0,1fr)}
+ .chat{display:none;position:fixed;right:0;bottom:0;top:108px;width:min(380px,100%);z-index:40;box-shadow:-10px 0 40px #000a}
+ .chat-open .chat{display:flex}
+}
+@media(max-width:899px){
+ .body,.nochat .body{grid-template-columns:minmax(0,1fr)}
+ #side{position:fixed;left:0;top:108px;bottom:0;width:270px;background:var(--panel);z-index:35;transform:translateX(-100%);transition:transform .25s}
+ .side-open #side{transform:none}
+ #mt{display:inline-block}.t1,.cta{display:none}.r1,.t2{padding:0 12px}.search{flex:1;width:auto}.logo{margin-right:0}
+ #content{padding:24px 18px 60px}
+}
 </style>
 </head>
 <body>
-<header><button id="mb" aria-label="Menu">☰ Menu</button><span class="logo">POO · C#</span><span class="sp"></span><span class="hint">Setas ← → para navegar</span></header>
-<nav id="menu"></nav>
-<div id="prog"></div>
-
-<main>
-
-<!-- 1 Início -->
-<section class="slide on" data-t="Início"><div class="in center">
-<span class="tag">Projeto escolar · C# · .NET</span>
-<h1>Programação Orientada a Objetos em C#</h1>
-<p class="big" style="font-size:1.25rem">Classes, objetos e os quatro pilares da POO</p>
-<p>Usa as setas do teclado ou o botão <b>▶ Apresentar</b> em baixo.</p>
-</div></section>
-
-<!-- 2 Introdução -->
-<section class="slide" data-t="Introdução"><div class="in">
-<h2>1 · <span>Introdução</span></h2>
-<div class="grid3">
-<div class="card"><span class="ic">⌨️</span><h3>O que é programação?</h3><p>Escrever instruções para o computador resolver problemas.</p></div>
-<div class="card"><span class="ic">🧩</span><h3>O que é a POO?</h3><p>Organizar o código em <b>objetos</b>, que juntam dados e comportamentos.</p></div>
-<div class="card"><span class="ic">🛠️</span><h3>Para que serve?</h3><p>Criar programas organizados, reutilizáveis e fáceis de manter.</p></div>
+<div class="app">
+<header class="hd">
+<div class="r1">
+<button id="mt" class="ib" aria-label="Menu">☰</button>
+<a class="logo" href="#inicio" aria-label="Início"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgeG1sbnM6YzJwYT0iaHR0cDovL2MycGEub3JnL21hbmlmZXN0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM0ZjhjZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM5YjZiZmYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0idXJsKCNnKSIvPjx0ZXh0IHg9IjMyIiB5PSI0MyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmIj5DIzwvdGV4dD48bWV0YWRhdGE+PGMycGE6bWFuaWZlc3Q+QUFBV2dtcDFiV0lBQUFBZWFuVnRaR015Y0dFQUVRQVFnQUFBcWdBNG0zRURZekp3WVFBQUFCWmNhblZ0WWdBQUFFZHFkVzFrWXpKdFlRQVJBQkNBQUFDcUFEaWJjUU4xY200Nll6SndZVG81TkRjNE9XWTJPQzFtWlRkaExUUXpPRGd0WWpkaVpTMHhabUV5TXpSalltVmpNMklBQUFBRGwycDFiV0lBQUFBcGFuVnRaR015WVhNQUVRQVFnQUFBcWdBNG0zRURZekp3WVM1aGMzTmxjblJwYjI1ekFBQUFBTHhxZFcxaUFBQUFSR3AxYldSalltOXlBQkVBRUlBQUFLb0FPSnR4RTJNeWNHRXVhVzVuY21Wa2FXVnVkQzUyTXdBQUFBQVlZekp6YUpqZEgxc1lWaG5vZ0dZU1Z5UWVBb0lBQUFCd1kySnZjcU5wWkdNNlptOXliV0YwYldsdFlXZGxMM04yWnl0NGJXeHFhVzV6ZEdGdVkyVkpSSGdzZUcxd09tbHBaRG94TVdOaE9UazBNUzB5T0RjeExUUmxNV1V0WVRZME1pMHhaVE14TVdVM09XSTJPRE5zY21Wc1lYUnBiMjV6YUdsd2FIQmhjbVZ1ZEU5bUFBQUI0bXAxYldJQUFBQkJhblZ0WkdOaWIzSUFFUUFRZ0FBQXFnQTRtM0VUWXpKd1lTNWhZM1JwYjI1ekxuWXlBQUFBQUJoak1uTm9zUUVmTFlJK1pXdkZwMGppbTVVS1J3QUFBWmxqWW05eW9tZGhZM1JwYjI1emdxSm1ZV04wYVc5dWEyTXljR0V1YjNCbGJtVmthbkJoY21GdFpYUmxjbk9oYTJsdVozSmxaR2xsYm5SemdhSmpkWEpzZUMxelpXeG1JMnAxYldKbVBXTXljR0V1WVhOelpYSjBhVzl1Y3k5ak1uQmhMbWx1WjNKbFpHbGxiblF1ZGpOa2FHRnphRmdnRUc2clpXWlpqR0puYWl0OEdYTno0dVpMQk1nVnJrZU4rdkhSWExmaGROMmtabUZqZEdsdmJuZ2RZMjl0TG1GdWRHaHliM0JwWXk1amJHRjFaR1V1Y0hKdmRtbGtaV1JxY0dGeVlXMWxkR1Z5YzZGNEgyTnZiUzVoYm5Sb2NtOXdhV011YjNKcFoybHVMV052Ym1acFpHVnVZMlZuZFc1cmJtOTNibXRrWlhOamNtbHdkR2x2Ym5obVEyeGhkV1JsSUhCeWIzWnBaR1ZrSUhSb2FYTWdabWxzWlNCaGRDQjBhR1VnY21WeGRXVnpkQ0J2WmlCaElIVnpaWElnWVc1a0lHMWhlU0JvWVhabElHTnlaV0YwWldRZ2IzSWdiVzlrYVdacFpXUWdkR2hsSUdacGJHVWdZMjl1ZEdWdWRITXViWE52Wm5SM1lYSmxRV2RsYm5TaFpHNWhiV1ZtUTJ4aGRXUmxjbUZzYkVGamRHbHZibk5KYm1Oc2RXUmxaUFVBQUFESWFuVnRZZ0FBQUVCcWRXMWtZMkp2Y2dBUkFCQ0FBQUNxQURpYmNSTmpNbkJoTG1oaGMyZ3VaR0YwWVFBQUFBQVlZekp6YUx0WWdxSGo0UlRYS0JPNWs1aTZRdTBBQUFDQVkySnZjcVZqWVd4blpuTm9ZVEkxTm1Od1lXUk1BQUFBQUFBQUFBQUFBQUFBWkdoaGMyaFlJQ1pDc042WkZ1cXUwa3JLcUxvRTVSUk41ZkdzdlJEUDBNaG5NUXY5YTBUUFpHNWhiV1Z1YW5WdFltWWdiV0Z1YVdabGMzUnFaWGhqYkhWemFXOXVjNEdpWlhOMFlYSjBHUUhDWm14bGJtZDBhQmtlQkFBQUFqNXFkVzFpQUFBQUoycDFiV1JqTW1Oc0FCRUFFSUFBQUtvQU9KdHhBMk15Y0dFdVkyeGhhVzB1ZGpJQUFBQUNEMk5pYjNLbFkyRnNaMlp6YUdFeU5UWnBjMmxuYm1GMGRYSmxlRTF6Wld4bUkycDFiV0ptUFM5ak1uQmhMM1Z5Ympwak1uQmhPamswTnpnNVpqWTRMV1psTjJFdE5ETTRPQzFpTjJKbExURm1ZVEl6TkdOaVpXTXpZaTlqTW5CaExuTnBaMjVoZEhWeVpXcHBibk4wWVc1alpVbEVlQ3g0YlhBNmFXbGtPbVprWm1Ka1kyVmlMVEU0Tm1FdE5HSTFNeTFoWldFMUxXSm1NV1l4WVdRMlpEYzRaSEpqY21WaGRHVmtYMkZ6YzJWeWRHbHZibk9Eb21OMWNteDRMWE5sYkdZamFuVnRZbVk5WXpKd1lTNWhjM05sY25ScGIyNXpMMk15Y0dFdWFXNW5jbVZrYVdWdWRDNTJNMlJvWVhOb1dDQVFicXRsWmxtTVltZHFLM3daYzNQaTVrc0V5Qld1UjQzNjhkRmN0K0YwM2FKamRYSnNlQ3B6Wld4bUkycDFiV0ptUFdNeWNHRXVZWE56WlhKMGFXOXVjeTlqTW5CaExtRmpkR2x2Ym5NdWRqSmthR0Z6YUZnZ1BsMFg0NDl3QzdKcldGSkFmR3Q4VWYwb3JiMWNXaE1pamYwYlFkUFgybmFpWTNWeWJIZ3BjMlZzWmlOcWRXMWlaajFqTW5CaExtRnpjMlZ5ZEdsdmJuTXZZekp3WVM1b1lYTm9MbVJoZEdGa2FHRnphRmdnRG1JNzlEeUxpS0ZjTXNTekg5K29hTGJ0VENpOHNIWWkzRTBmNlBmdkJvZDBZMnhoYVcxZloyVnVaWEpoZEc5eVgybHVabStqWkc1aGJXVnZRVzUwYUhKdmNHbGpJRVpwYkdWelozWmxjbk5wYjI1bE1TNHdMakJyYzNCbFkxWmxjbk5wYjI1bE1pNDBMakFBQUJBNGFuVnRZZ0FBQUNocWRXMWtZekpqY3dBUkFCQ0FBQUNxQURpYmNRTmpNbkJoTG5OcFoyNWhkSFZ5WlFBQUFCQUlZMkp2Y3RLRVdRSVNvZ0VtR0NGWkFnb3dnZ0lHTUlJQmphQURBZ0VDQWhSQTVhQUs3c0k1MEw2NGcvb0dRZ1U5WjFVVEFEQUtCZ2dxaGtqT1BRUURBekJKTVJjd0ZRWURWUVFLRXc1QmJuUm9jbTl3YVdNc0lGQkNRekV1TUN3R0ExVUVBeE1sUVc1MGFISnZjR2xqSUVOdmJuUmxiblFnUTNKbFpHVnVkR2xoYkhNZ1VtOXZkQ0JEUVRBZUZ3MHlOakE0TURjeE9EUXpOVFphRncweU9EQTRNRFl4T1RRek5UWmFNRVF4RnpBVkJnTlZCQW9URGtGdWRHaHliM0JwWXl3Z1VFSkRNU2t3SndZRFZRUURFeUJCYm5Sb2NtOXdhV01nUTJ4aGRXUmxJRU52Ym5SbGJuUWdVMmxuYm1sdVp6QlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJKaDZDbXZMVUJnRkZOVTB2VUtsT1Z0RTZkamQxN0w1U3V3WDBMZW1GaXNCTTNka2QvM2N5anhGQTNRbzVTNDZmWDAvaWhZMFZaN21mYjlLRjcwM3Q1T2pXREJXTUE0R0ExVWREd0VCL3dRRUF3SUhnREFWQmdOVkhTVUVEakFNQmdvckJnRUVBWVBvWGdJQk1Bd0dBMVVkRXdFQi93UUNNQUF3SHdZRFZSMGpCQmd3Rm9BVXpsSGlCSUZPWkZzaitPUEV6NW8rbk1IWFhNSXdDZ1lJS29aSXpqMEVBd01EWndBd1pBSXdNWE1kRko0QmV0TExWWTdPUnVFOW5vcWJiQVpPWm4vYUFyWHlUd0ZBWmZLclB6eEYydlBvSk5mMStVQ2RnMVhHQWpCd1gxemQ5V0dxWWtxbUw1U0ZxdzFReVNqcjF6SmZwSk05KzFyZER3U1BMTU9QT2pLdWlYam9VL3BVVWVHOVJ3bWhZM0JoWkZrTm5nQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUFpZUUNUVUlaeWUvZXk3MnY2SU5IRTFhVGlwclRWUkVaWjdkYmFzcFhmSEk3eXY5cVJXQWR0K2M0UkFuakoyOUh0ZkJadjFDakVoYy91MGIzR3lDcHdxaFdzPTwvYzJwYTptYW5pZmVzdD48L21ldGFkYXRhPjwvc3ZnPgo=" alt=""></a>
+<nav id="tabs1" class="t1"><a href="#introducao">Guia</a><a href="#exemplo">Exemplo</a><a href="#questionario">Quiz</a></nav>
+<span class="sp"></span>
+<div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" placeholder="Pesquisar…" autocomplete="off" aria-label="Pesquisar"><div id="sr"></div></div>
+<button id="ct" class="ib" aria-label="Assistente">💬</button>
+<a class="cta" href="#introducao">Começar</a>
 </div>
-<p>A POO é importante porque permite <b>trabalhar em equipa</b> e fazer crescer o software sem o código se tornar um caos.</p>
-</div></section>
+<nav id="tabs2" class="t2"></nav>
+</header>
+<div class="body">
+<aside id="side"></aside>
+<main id="content"><div class="inner">
+<article class="page" id="inicio" data-t="Visão geral" data-g="Começar"><header class="ph"><h1>Programação Orientada a Objetos em C#</h1><p>Um guia interativo sobre classes, objetos e os quatro pilares da POO, com exemplos de código que podes copiar e experimentar.</p></header><div class="grid3">
+<a class="card" href="#introducao"><h3>📘 Introdução</h3><p>O que é a POO e porque é importante.</p></a>
+<a class="card" href="#encapsulamento"><h3>🧩 Os quatro pilares</h3><p>Encapsulamento, herança, polimorfismo e abstração.</p></a>
+<a class="card" href="#exemplo"><h3>🛠️ Exemplo prático</h3><p>Um sistema de gestão de veículos em C#.</p></a>
+<a class="card" href="#questionario"><h3>✅ Questionário</h3><p>Testa o que aprendeste, com feedback imediato.</p></a></div>
+<div class="callout"><p>Dica: usa a <b>pesquisa</b> no topo para saltar para qualquer tema e o <b>assistente</b> à direita para tirar dúvidas.</p></div></article>
+<article class="page" id="introducao" data-t="Introdução" data-g="Começar"><header class="ph"><h1>Introdução</h1><p>O que é programar, o que é a POO e porque é importante.</p></header>
 
-<!-- 3 C# -->
-<section class="slide" data-t="O que é C#?"><div class="in">
-<h2>2 · <span>O que é o C#?</span></h2>
-<div class="cols">
-<div>
-<p>O <b>C#</b> (lê-se «C sharp») é uma linguagem moderna criada pela Microsoft no início dos anos 2000.</p>
-<ul><li>Orientada a objetos e fortemente tipada</li><li>Sintaxe clara e segura</li><li>Multiplataforma com o .NET</li></ul>
-<div class="chips" style="margin-top:10px"><span class="chip">Web</span><span class="chip">Desktop</span><span class="chip">Jogos (Unity)</span><span class="chip">Móvel</span><span class="chip">Cloud</span></div>
-</div>
-<div class="diag">
-<div class="box">Código C#<small>ficheiros .cs</small></div><span class="arr">▼</span>
-<div class="box">Compilador<small>transforma o código</small></div><span class="arr">▼</span>
-<div class="box cls">Plataforma .NET<small>executa o programa</small></div><span class="arr">▼</span>
-<div class="box">Aplicação a funcionar</div>
-</div>
-</div>
-</div></section>
+<h3>O que é programação?</h3>
+<p>Programar é escrever instruções que o computador consegue executar para resolver um problema, desde uma calculadora simples até um videojogo.</p>
+<h3>O que é a Programação Orientada a Objetos?</h3>
+<p>A <b>Programação Orientada a Objetos (POO)</b> é uma forma de organizar o código em <b>objetos</b>. Cada objeto junta <b>dados</b> (o que ele sabe) e <b>comportamentos</b> (o que ele faz). Um objeto <code>Carro</code>, por exemplo, tem marca e velocidade e sabe acelerar.</p>
+<h3>Para que serve e porque é importante?</h3>
+<ul><li>Organiza programas grandes em partes pequenas e fáceis de perceber</li><li>Permite reutilizar código em vez de o repetir</li><li>Facilita a manutenção e o trabalho em equipa</li></ul>
+<div class="callout"><p><b>Ideia-chave:</b> em vez de um programa com instruções soltas, temos objetos que colaboram entre si, tal como no mundo real.</p></div>
+</article>
+<article class="page" id="csharp" data-t="O que é o C#?" data-g="Começar"><header class="ph"><h1>O que é o C#?</h1><p>A linguagem e a plataforma .NET onde os programas correm.</p></header>
 
-<!-- 4 Pilares -->
-<section class="slide" data-t="Os quatro pilares"><div class="in">
-<h2>3 · <span>Os quatro pilares da POO</span></h2>
-<p>Clica num cartão para ver cada pilar em detalhe.</p>
-<div class="grid4">
-<div class="card" data-go="4"><span class="ic">🔒</span><h3>Encapsulamento</h3><p>Protege os dados do objeto.</p></div>
-<div class="card" data-go="5"><span class="ic">🧬</span><h3>Herança</h3><p>Reutiliza classes existentes.</p></div>
-<div class="card" data-go="6"><span class="ic">🎭</span><h3>Polimorfismo</h3><p>Mesma chamada, resultados diferentes.</p></div>
-<div class="card" data-go="7"><span class="ic">🧠</span><h3>Abstração</h3><p>Mostra só o essencial.</p></div>
-</div>
-</div></section>
+<p>O <b>C#</b> (lê-se «C sharp») é uma linguagem moderna criada pela Microsoft no início dos anos 2000. É orientada a objetos, fortemente tipada e tem uma sintaxe clara e segura.</p>
+<p>O C# funciona sobre a plataforma <b>.NET</b>, que compila e executa os programas e oferece bibliotecas prontas a usar. Hoje corre em Windows, Linux e macOS.</p>
+<div class="row2 diag" style="flex-direction:row;align-items:center"><div class="box">Código C#<small>ficheiros .cs</small></div><span class="arr">→</span><div class="box">Compilador</div><span class="arr">→</span><div class="box cls">Plataforma .NET</div><span class="arr">→</span><div class="box">Aplicação</div></div>
+<table><tr><th>Área</th><th>Tecnologia habitual</th></tr>
+<tr><td>Web</td><td>ASP.NET</td></tr><tr><td>Videojogos</td><td>Unity</td></tr><tr><td>Desktop</td><td>WPF, Windows Forms</td></tr><tr><td>Móvel</td><td>.NET MAUI</td></tr></table>
+</article>
+<article class="page" id="pilares" data-t="Visão geral" data-g="Pilares"><header class="ph"><h1>Os quatro pilares da POO</h1><p>Resumo das quatro ideias fundamentais da POO.</p></header>
 
-<!-- 5 Encapsulamento -->
-<section class="slide" data-t="Encapsulamento"><div class="in">
-<h2>🔒 <span>Encapsulamento</span></h2>
-<div class="cols">
-<div>
-<h3>O que é?</h3><p>Esconder o estado interno do objeto e só permitir alterações através de métodos ou propriedades.</p>
-<h3 style="margin-top:8px">Para que serve?</h3><p>Evita valores inválidos e protege os dados.</p>
-<h3 style="margin-top:8px">Explicação</h3>
-<ul><li><b>_saldo</b> é <b>private</b>: ninguém o altera de fora</li><li><b>Saldo</b> só permite ler</li><li><b>Depositar</b> valida antes de alterar</li></ul>
-</div>
-<div>
+<p>A POO assenta em quatro ideias fundamentais. Eis o resumo, seguido de cada pilar em detalhe.</p>
+<table><tr><th>Pilar</th><th>Ideia</th><th>Em C#</th></tr>
+<tr><td><b>Encapsulamento</b></td><td>Proteger os dados</td><td><code>private</code>, propriedades</td></tr>
+<tr><td><b>Herança</b></td><td>Reutilizar classes</td><td><code>:</code></td></tr>
+<tr><td><b>Polimorfismo</b></td><td>Mesma chamada, comportamentos diferentes</td><td><code>virtual</code>, <code>override</code></td></tr>
+<tr><td><b>Abstração</b></td><td>Mostrar só o essencial</td><td><code>abstract</code>, interfaces</td></tr></table>
+
+<div class="grid3"><a class="card" href="#encapsulamento"><h3>🔒 Encapsulamento</h3><p>Proteger os dados.</p></a><a class="card" href="#heranca"><h3>🧬 Herança</h3><p>Reutilizar classes.</p></a><a class="card" href="#polimorfismo"><h3>🎭 Polimorfismo</h3><p>Vários comportamentos.</p></a><a class="card" href="#abstracao"><h3>🧠 Abstração</h3><p>Mostrar o essencial.</p></a></div></article>
+<article class="page" id="encapsulamento" data-t="Encapsulamento" data-g="Pilares"><header class="ph"><h1>Encapsulamento</h1><p>Proteger os dados do objeto.</p></header>
+<p><b>O que é?</b> Esconder o estado interno do objeto e só permitir alterá-lo através de métodos ou propriedades. <b>Para que serve?</b> Evita valores inválidos e protege os dados.</p>
 <pre>public class Conta
 {
     private decimal _saldo;
@@ -153,21 +174,13 @@ pre i{font-style:normal}.k{color:#c792ff}.s{color:#8be9a0}.c{color:#6c7086;font-
         _saldo += valor;
     }
 }</pre>
+<p>O campo <code>_saldo</code> é <code>private</code>, logo ninguém o altera de fora. A propriedade <code>Saldo</code> só permite ler, e o método <code>Depositar</code> valida o valor antes de alterar.</p>
 <div class="demo"><div class="row"><input id="val" type="number" value="50"><button id="dep" class="pri">Depositar</button><button id="hack">Alterar _saldo diretamente</button></div><div id="eout" class="out">Experimenta: valor positivo, negativo ou zero.</div></div>
-</div>
-</div>
-</div></section>
 
-<!-- 6 Herança -->
-<section class="slide" data-t="Herança"><div class="in">
-<h2>🧬 <span>Herança</span></h2>
-<div class="cols">
-<div>
-<h3>O que é?</h3><p>Uma classe <b>derivada</b> herda propriedades e métodos de uma classe <b>base</b>.</p>
-<h3 style="margin-top:8px">Como funciona?</h3><p>Usa-se <b>:</b> na declaração. Relação do tipo «é um»: um Carro <b>é um</b> Veículo.</p>
-<div class="diag" style="margin-top:12px"><div class="box cls">Veiculo<small>Marca · Modelo</small></div><span class="arr">▲ ▲</span><div class="row2"><div class="box">Carro</div><div class="box">Mota</div></div></div>
-</div>
-<div>
+</article>
+<article class="page" id="heranca" data-t="Herança" data-g="Pilares"><header class="ph"><h1>Herança</h1><p>Reutilizar o código de outras classes.</p></header>
+<p><b>O que é?</b> Uma classe <b>derivada</b> herda propriedades e métodos de uma classe <b>base</b>. Usa-se <code>:</code> na declaração e a relação é do tipo «é um»: um Carro <b>é um</b> Veículo. Assim, o código comum escreve-se só uma vez.</p>
+<div class="diag"><div class="box cls">Veiculo<small>Marca · Modelo</small></div><span class="arr">▲ ▲</span><div class="row2"><div class="box">Carro</div><div class="box">Mota</div></div></div>
 <pre>public class Veiculo
 {
     public string Marca { get; set; }
@@ -182,21 +195,10 @@ public class Carro : Veiculo
 
 var c = new Carro { Marca = "Toyota", Portas = 5 };
 c.Ligar(); // método herdado</pre>
-</div>
-</div>
-</div></section>
 
-<!-- 7 Polimorfismo -->
-<section class="slide" data-t="Polimorfismo"><div class="in">
-<h2>🎭 <span>Polimorfismo</span></h2>
-<div class="cols">
-<div>
-<h3>O que é?</h3><p>Objetos diferentes respondem à mesma chamada de formas diferentes.</p>
-<h3 style="margin-top:8px">Como funciona?</h3>
-<ul><li><b>virtual</b> na classe base: permite redefinir</li><li><b>override</b> na derivada: nova versão</li><li>O método executado depende do <b>tipo real</b> do objeto</li></ul>
-<div class="demo" style="margin-top:12px"><div class="row"><button data-a="Cão">🐶 Cão</button><button data-a="Gato">🐱 Gato</button><button data-a="Vaca">🐮 Vaca</button></div><div id="pout" class="out">Escolhe um animal.</div></div>
-</div>
-<div>
+</article>
+<article class="page" id="polimorfismo" data-t="Polimorfismo" data-g="Pilares"><header class="ph"><h1>Polimorfismo</h1><p>A mesma chamada, comportamentos diferentes.</p></header>
+<p><b>O que é?</b> Objetos diferentes respondem à mesma chamada de formas diferentes. Em C# usa-se <code>virtual</code> na classe base, que permite redefinir o método, e <code>override</code> na classe derivada, que fornece a nova versão. O método executado depende do <b>tipo real</b> do objeto.</p>
 <pre>public class Animal
 {
     public virtual string EmitirSom() => "...";
@@ -214,21 +216,11 @@ public class Gato : Animal
 
 Animal a = new Gato();
 Console.WriteLine(a.EmitirSom()); // Miau!</pre>
-</div>
-</div>
-</div></section>
+<div class="demo"><div class="row"><button data-a="Cão">🐶 Cão</button><button data-a="Gato">🐱 Gato</button><button data-a="Vaca">🐮 Vaca</button></div><div id="pout" class="out">Escolhe um animal.</div></div>
 
-<!-- 8 Abstração -->
-<section class="slide" data-t="Abstração"><div class="in">
-<h2>🧠 <span>Abstração</span></h2>
-<div class="cols">
-<div>
-<h3>O que é?</h3><p>Mostrar apenas o que é essencial e esconder os detalhes.</p>
-<h3 style="margin-top:8px">Porque é importante?</h3><p>Simplifica o uso das classes e define regras comuns.</p>
-<ul style="margin-top:8px"><li><b>abstract class</b>: não pode ser instanciada</li><li><b>abstract</b> método: sem corpo, as derivadas são obrigadas a implementá-lo</li></ul>
-<div class="diag" style="margin-top:10px"><div class="box cls">Forma (abstrata)<small>Area()</small></div><span class="arr">▲ ▲</span><div class="row2"><div class="box">Circulo</div><div class="box">Retangulo</div></div></div>
-</div>
-<div>
+</article>
+<article class="page" id="abstracao" data-t="Abstração" data-g="Pilares"><header class="ph"><h1>Abstração</h1><p>Mostrar só o essencial e esconder os detalhes.</p></header>
+<p><b>O que é?</b> Mostrar apenas o que é essencial e esconder os detalhes. <b>Porque é importante?</b> Simplifica o uso das classes e define regras comuns. Uma <code>abstract class</code> não pode ser instanciada, e um método <code>abstract</code> não tem corpo: as classes derivadas são obrigadas a implementá-lo.</p>
 <pre>public abstract class Forma
 {
     public abstract double Area();
@@ -248,23 +240,17 @@ public class Circulo : Forma
 
 // var f = new Forma(); // ERRO: classe abstrata
 new Circulo(2).Mostrar(); // Área: 12.57</pre>
-</div>
-</div>
-</div></section>
+<div class="diag"><div class="box cls">Forma (abstrata)<small>Area()</small></div><span class="arr">▲ ▲</span><div class="row2"><div class="box">Circulo</div><div class="box">Retangulo</div></div></div>
+</article>
+<article class="page" id="classes" data-t="Classes e objetos" data-g="Classes"><header class="ph"><h1>Classes e objetos</h1><p>O molde e as instâncias criadas a partir dele.</p></header>
 
-<!-- 9 Classes e Objetos -->
-<section class="slide" data-t="Classes e Objetos"><div class="in">
-<h2>4 · <span>Classes e Objetos</span></h2>
-<div class="cols">
-<div>
-<p><b>Classe</b> = molde. <b>Objeto</b> = instância criada a partir do molde.</p>
-<div class="chips"><span class="chip">Propriedades: dados</span><span class="chip">Métodos: ações</span><span class="chip">Construtor: cria o objeto</span></div>
-<div class="diag" style="margin-top:12px">
-<div class="box cls">class Carro<small>Marca · Modelo · Velocidade · Acelerar()</small></div><span class="arr">▼ new ▼</span>
-<div class="row2"><div class="box">c1<small>Toyota Yaris</small></div><div class="box">c2<small>Honda Civic</small></div></div></div>
-<div class="demo" style="margin-top:12px"><div class="row"><b>c1.Velocidade = <span id="vel">0</span> km/h</b></div><div class="bar"><i id="vbar"></i></div><div class="row"><button id="acc" class="pri">c1.Acelerar(20)</button><button id="brk">Travar</button></div></div>
-</div>
-<div>
+<p>Uma <b>classe</b> é o molde que descreve como são os objetos. Um <b>objeto</b> é uma instância concreta criada a partir desse molde com <code>new</code>.</p>
+<table><tr><th></th><th>Classe</th><th>Objeto</th></tr>
+<tr><td><b>É</b></td><td>O molde</td><td>Uma instância do molde</td></tr>
+<tr><td><b>Exemplo</b></td><td><code>Carro</code></td><td><code>c1</code> (Toyota Yaris), <code>c2</code> (Honda Civic)</td></tr>
+<tr><td><b>Quantidade</b></td><td>Definida uma vez</td><td>Podem existir muitos</td></tr></table>
+<h3>Propriedades, métodos e construtores</h3>
+<ul><li><b>Propriedades:</b> guardam os dados (<code>Marca</code>, <code>Modelo</code>, <code>Velocidade</code>)</li><li><b>Métodos:</b> são as ações (<code>Acelerar</code>)</li><li><b>Construtor:</b> prepara o objeto quando é criado</li></ul>
 <pre>public class Carro
 {
     public string Marca { get; set; }
@@ -283,17 +269,14 @@ new Circulo(2).Mostrar(); // Área: 12.57</pre>
 var c1 = new Carro("Toyota", "Yaris");
 var c2 = new Carro("Honda", "Civic");
 c1.Acelerar(20);</pre>
-</div>
-</div>
-</div></section>
+<div class="demo"><div class="row"><b>c1.Velocidade = <span id="vel">0</span> km/h</b></div><div class="bar"><i id="vbar"></i></div><div class="row"><button id="acc" class="pri">c1.Acelerar(20)</button><button id="brk">Travar</button></div></div>
+</article>
+<article class="page" id="exemplo" data-t="Exemplo prático" data-g="Prática"><header class="ph"><h1>Exemplo prático</h1><p>Um sistema de gestão de veículos que junta tudo.</p></header>
 
-<!-- 10 Exemplo prático -->
-<section class="slide" data-t="Exemplo prático"><div class="in">
-<h2>5 · <span>Gestão de veículos</span></h2>
+<p>Um pequeno sistema que junta tudo o que vimos: classes, objetos, propriedades, métodos, construtores, herança, encapsulamento e polimorfismo.</p>
 <div class="tabwrap">
 <div class="tabs"><button class="on">1 · Classe base</button><button>2 · Classes derivadas</button><button>3 · Programa</button></div>
-<div class="pane on">
-<pre>public class Veiculo
+<div class="pane on"><pre>public class Veiculo
 {
     public string Marca { get; }
     public string Modelo { get; }
@@ -314,11 +297,8 @@ c1.Acelerar(20);</pre>
 
     public virtual string Descrever() =>
         $"{Marca} {Modelo} a {Velocidade} km/h";
-}</pre>
-<p>Dados protegidos com <b>private</b>, construtor para criar o objeto e um método <b>virtual</b> que as derivadas podem mudar.</p>
-</div>
-<div class="pane">
-<pre>public class Carro : Veiculo                  // herança
+}</pre><p>Dados protegidos com <code>private</code>, construtor para criar o objeto e um método <code>virtual</code> que as derivadas podem mudar.</p></div>
+<div class="pane"><pre>public class Carro : Veiculo                  // herança
 {
     public Carro(string marca, string modelo)
         : base(marca, modelo) { }
@@ -334,11 +314,8 @@ public class Mota : Veiculo
 
     public override string Descrever() =>
         $"Mota: {base.Descrever()}";
-}</pre>
-<p><b>Carro</b> e <b>Mota</b> herdam tudo de <b>Veiculo</b> e redefinem apenas <b>Descrever()</b>.</p>
-</div>
-<div class="pane">
-<pre>var frota = new List&lt;Veiculo&gt;
+}</pre><p><b>Carro</b> e <b>Mota</b> herdam tudo de <b>Veiculo</b> e redefinem apenas <code>Descrever()</code>.</p></div>
+<div class="pane"><pre>var frota = new List&lt;Veiculo&gt;
 {
     new Carro("Toyota", "Yaris"),
     new Mota("Yamaha", "MT-07")
@@ -351,103 +328,132 @@ foreach (var v in frota)
 }
 
 // Carro: Toyota Yaris a 60 km/h
-// Mota: Yamaha MT-07 a 60 km/h</pre>
-<p>A lista guarda <b>Veiculo</b>, mas cada objeto usa a sua própria versão de <b>Descrever()</b>.</p>
+// Mota: Yamaha MT-07 a 60 km/h</pre><p>A lista guarda <b>Veiculo</b>, mas cada objeto usa a sua própria versão de <code>Descrever()</code>.</p></div>
 </div>
-</div>
-</div></section>
+</article>
+<article class="page" id="vantagens" data-t="Vantagens e desvantagens" data-g="Prática"><header class="ph"><h1>Vantagens e desvantagens</h1><p>O que a POO traz de bom e onde pode complicar.</p></header>
 
-<!-- 11 Vantagens/Desvantagens -->
-<section class="slide" data-t="Vantagens e desvantagens"><div class="in">
-<h2>6 · <span>Vantagens e desvantagens</span></h2>
-<div class="cols">
-<div class="grid3" style="grid-template-columns:1fr 1fr">
-<div class="card good"><h3>♻️ Reutilização</h3><p>Herança evita repetir código.</p></div>
+<div class="grid3">
+<div class="card good"><h3>♻️ Reutilização</h3><p>A herança evita repetir código.</p></div>
 <div class="card good"><h3>🗂️ Organização</h3><p>Cada classe tem o seu papel.</p></div>
 <div class="card good"><h3>🔧 Manutenção</h3><p>Alterar uma classe afeta pouco o resto.</p></div>
 <div class="card good"><h3>🧱 Modularidade</h3><p>Partes independentes e testáveis.</p></div>
-</div>
-<div class="grid3" style="grid-template-columns:1fr">
 <div class="card bad"><h3>📚 Complexidade inicial</h3><p>Há muitos conceitos para aprender no início.</p></div>
 <div class="card bad"><h3>🌀 Excesso de abstração</h3><p>Demasiadas classes podem complicar programas simples.</p></div>
 </div>
-</div>
-</div></section>
+</article>
+<article class="page" id="uso" data-t="Onde é utilizada?" data-g="Prática"><header class="ph"><h1>Onde é utilizada?</h1><p>Exemplos reais de utilização da POO.</p></header>
 
-<!-- 12 Onde é usada -->
-<section class="slide" data-t="Onde é usada?"><div class="in">
-<h2>7 · <span>Onde é utilizada?</span></h2>
 <div class="grid3">
-<div class="card"><span class="ic">📱</span><h3>Aplicações</h3><p>Apps móveis e programas do dia a dia.</p></div>
-<div class="card"><span class="ic">🎮</span><h3>Videojogos com Unity</h3><p>Jogadores, inimigos e itens são objetos.</p></div>
-<div class="card"><span class="ic">🏢</span><h3>Sistemas empresariais</h3><p>Faturação, clientes e stocks.</p></div>
-<div class="card"><span class="ic">🖥️</span><h3>Aplicações desktop</h3><p>Janelas e botões são objetos.</p></div>
-<div class="card"><span class="ic">🌐</span><h3>Aplicações web</h3><p>Com ASP.NET, para sites e serviços.</p></div>
-<div class="card"><span class="ic">📋</span><h3>Sistemas de gestão</h3><p>Escolas, hospitais e armazéns.</p></div>
+<div class="card"><h3>📱 Aplicações</h3><p>Apps móveis e programas do dia a dia.</p></div>
+<div class="card"><h3>🎮 Videojogos com Unity</h3><p>Jogadores, inimigos e itens são objetos.</p></div>
+<div class="card"><h3>🏢 Sistemas empresariais</h3><p>Faturação, clientes e stocks.</p></div>
+<div class="card"><h3>🖥️ Aplicações desktop</h3><p>Janelas e botões são objetos.</p></div>
+<div class="card"><h3>🌐 Aplicações web</h3><p>Com ASP.NET, para sites e serviços.</p></div>
+<div class="card"><h3>📋 Sistemas de gestão</h3><p>Escolas, hospitais e armazéns.</p></div>
 </div>
-</div></section>
+</article>
+<article class="page" id="questionario" data-t="Questionário final" data-g="Final"><header class="ph"><h1>Questionário final</h1><p>Testa o que aprendeste.</p></header>
 
-<!-- 13 Quiz -->
-<section class="slide" data-t="Questionário"><div class="in">
-<h2>✅ <span>Questionário final</span></h2>
+<p>Testa o que aprendeste. Recebes feedback logo após cada resposta.</p>
 <div id="quiz"></div>
-</div></section>
+</article>
+<article class="page" id="conclusao" data-t="Conclusão" data-g="Final"><header class="ph"><h1>Conclusão</h1><p>O que aprendeste e porque a POO é importante.</p></header>
 
-<!-- 14 Conclusão -->
-<section class="slide" data-t="Conclusão"><div class="in center">
-<h2>8 · <span>Conclusão</span></h2>
-<div class="chips" style="justify-content:center"><span class="chip">Classes e objetos</span><span class="chip">Encapsulamento</span><span class="chip">Herança</span><span class="chip">Polimorfismo</span><span class="chip">Abstração</span></div>
-<p style="max-width:700px">A POO organiza o código em partes pequenas e reutilizáveis. Em C#, é a base para criar software moderno, seguro e fácil de evoluir.</p>
-<h1 class="big">Obrigado! Perguntas?</h1>
-</div></section>
-
-</main>
-
-<footer>
-<button id="prev">‹ Anterior</button><span id="cnt"></span><span class="sp"></span>
-<button id="full">▶ Apresentar</button><button id="next" class="pri">Seguinte ›</button>
-</footer>
-
+<p>Ficaste a conhecer os conceitos base da POO em C#: <b>classes e objetos</b>, e os quatro pilares, <b>encapsulamento, herança, polimorfismo e abstração</b>. Juntos, ajudam a escrever código organizado, reutilizável e fácil de manter.</p>
+<div class="callout"><p>A POO está por trás de grande parte do software moderno, das aplicações empresariais aos videojogos. Dominá-la é um passo essencial para programar bem.</p></div>
+<p><b>Obrigado pela leitura!</b></p>
+</article>
+<div id="pn"></div>
+</div></main>
+<aside class="chat">
+<div class="ch"><span>Assistente POO</span><button id="cc" class="ib" aria-label="Fechar assistente">⤡</button></div>
+<div id="msgs"></div>
+<div id="sug"></div>
+<form id="cf" class="cf"><input id="ci" placeholder="Escreve uma mensagem…" autocomplete="off" aria-label="Mensagem"><button class="send" aria-label="Enviar">➤</button></form>
+</aside>
+</div>
+</div>
 <script>
 (()=>{
 const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
-const slides=$$('.slide'),menu=$('#menu'),prog=$('#prog'),cnt=$('#cnt');
-let i=0;
+const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+const pages=$$('.page'),GROUPS=['Começar','Pilares','Classes','Prática','Final'];
 
-/* Navegação */
-slides.forEach((s,k)=>{const a=document.createElement('a');a.textContent=`${k+1}. ${s.dataset.t}`;a.onclick=()=>{go(k);menu.classList.remove('open')};menu.appendChild(a)});
-function go(n){
-  i=Math.max(0,Math.min(slides.length-1,n));
-  slides.forEach((s,k)=>s.classList.toggle('on',k===i));
-  $$('#menu a').forEach((a,k)=>a.classList.toggle('cur',k===i));
-  cnt.textContent=`${i+1} / ${slides.length}`;
-  prog.style.width=((i+1)/slides.length*100)+'%';
-  $('#prev').disabled=i===0;$('#next').disabled=i===slides.length-1;
-  slides[i].scrollTop=0;
+/* Menu lateral e separadores */
+$('#side').innerHTML=GROUPS.map(g=>`<h5>${g}</h5>`+pages.filter(p=>p.dataset.g===g).map(p=>`<a href="#${p.id}" data-id="${p.id}">${p.dataset.t}</a>`).join('')).join('');
+$('#tabs2').innerHTML=GROUPS.map(g=>`<a href="#${pages.find(p=>p.dataset.g===g).id}" data-g="${g}">${g}</a>`).join('');
+
+/* Navegação entre páginas (por #hash) */
+function show(){
+  let k=pages.findIndex(p=>p.id===location.hash.slice(1));if(k<0)k=0;
+  const p=pages[k];
+  pages.forEach((x,j)=>x.classList.toggle('on',j===k));
+  $$('#side a').forEach(a=>a.classList.toggle('cur',a.dataset.id===p.id));
+  $$('#tabs2 a').forEach(a=>a.classList.toggle('cur',a.dataset.g===p.dataset.g));
+  const pt=p.id==='exemplo'?'exemplo':p.id==='questionario'?'questionario':'introducao';
+  $$('#tabs1 a').forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+pt));
+  document.title=p.dataset.t+' · POO em C#';
+  const pv=pages[k-1],nx=pages[k+1];
+  $('#pn').innerHTML=(pv?`<a href="#${pv.id}"><small>‹ Anterior</small>${pv.dataset.t}</a>`:'<span></span>')+(nx?`<a class="r" href="#${nx.id}"><small>Seguinte ›</small>${nx.dataset.t}</a>`:'<span></span>');
+  $('#content').scrollTop=0;document.body.classList.remove('side-open');
 }
-$('#prev').onclick=()=>go(i-1);$('#next').onclick=()=>go(i+1);
-$('#mb').onclick=()=>menu.classList.toggle('open');
-$$('[data-go]').forEach(e=>e.onclick=()=>go(+e.dataset.go));
-document.addEventListener('keydown',e=>{
-  if(e.target.tagName==='INPUT')return;
-  if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(i+1)}
-  else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(i-1)}
-  else if(e.key==='Home')go(0);else if(e.key==='End')go(slides.length-1);
-  else if(e.key==='Escape'){menu.classList.remove('open');pres(false)}
-});
+addEventListener('hashchange',show);show();
 
-/* Modo de apresentação */
-const pres=on=>{
-  document.body.classList.toggle('present',on);
-  $('#full').textContent=on?'✕ Sair':'▶ Apresentar';
-  if(!on&&document.fullscreenElement)document.exitFullscreen();
+/* Pesquisa */
+const idx=pages.map(p=>({p,t:norm(p.dataset.t+' '+p.textContent)}));
+const q=$('#q'),sr=$('#sr');
+q.oninput=()=>{
+  const v=norm(q.value.trim());if(v.length<2){sr.style.display='none';return}
+  const r=idx.filter(x=>x.t.includes(v)).slice(0,7);
+  sr.innerHTML=r.length?r.map(x=>`<a href="#${x.p.id}">${x.p.dataset.t}<small>${x.p.dataset.g}</small></a>`).join(''):'<p>Sem resultados</p>';
+  sr.style.display='block';
 };
-$('#full').onclick=()=>{
-  const on=!document.body.classList.contains('present');
-  pres(on);
-  if(on&&document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{});
+q.onkeydown=e=>{if(e.key==='Enter'){const a=$('a',sr);if(a)a.click()}if(e.key==='Escape')q.blur()};
+sr.onclick=()=>{sr.style.display='none';q.value=''};
+document.addEventListener('click',e=>{if(!e.target.closest('.search'))sr.style.display='none'});
+
+/* Painéis */
+const wide=()=>matchMedia('(min-width:1180px)').matches;
+const tc=()=>document.body.classList.toggle(wide()?'nochat':'chat-open');
+$('#ct').onclick=tc;$('#cc').onclick=tc;
+$('#mt').onclick=()=>document.body.classList.toggle('side-open');
+
+/* Assistente */
+const FAQ=[
+{k:['classe e objeto','classes e objetos'],a:"A classe é o molde; o objeto é uma instância concreta criada a partir dele com new. Uma classe pode gerar muitos objetos, cada um com os seus valores."},
+{k:['diferenca'],a:"Herança serve para reutilizar código: uma classe deriva de outra. Polimorfismo serve para variar o comportamento: objetos diferentes respondem de forma diferente à mesma chamada. Costumam usar-se em conjunto."},
+{k:['classe abstrata','abstrata','abstract'],a:"Não. Uma classe abstract não pode ser instanciada com new. Só podes criar objetos das classes derivadas que implementem os seus métodos abstratos."},
+{k:['encapsul','private','privado'],a:"Encapsulamento é esconder o estado interno do objeto. Marcas os campos como private e só permites alterá-los através de métodos ou propriedades, que podem validar os valores."},
+{k:['heranca','herda','derivad'],a:"Na herança, uma classe derivada reutiliza o que a classe base já tem. Em C# escreve-se class Carro : Veiculo. A relação é do tipo «é um»."},
+{k:['polimorf','virtual','override'],a:"No polimorfismo, a mesma chamada produz resultados diferentes conforme o tipo real do objeto. Usas virtual na classe base e override na classe derivada."},
+{k:['abstra','interface'],a:"Abstração é mostrar só o essencial. Uma classe abstract define regras comuns e pode ter métodos abstract sem corpo, que as derivadas são obrigadas a implementar."},
+{k:['construtor'],a:"O construtor é um método especial, com o nome da classe, que corre quando crias o objeto com new e prepara os seus valores iniciais."},
+{k:['propriedade'],a:"Uma propriedade guarda um dado do objeto e controla o acesso a ele com get e set. Por exemplo: public string Marca { get; set; }."},
+{k:['objeto','instancia'],a:"Um objeto é uma instância concreta de uma classe. Por exemplo, c1 e c2 são dois objetos criados a partir da classe Carro."},
+{k:['classe','molde'],a:"Uma classe é o molde que descreve como são os objetos: que dados têm (propriedades) e o que sabem fazer (métodos)."},
+{k:['c#','csharp','.net','dotnet'],a:"C# é uma linguagem moderna da Microsoft, orientada a objetos. Os programas correm sobre a plataforma .NET."},
+{k:['unity','jogo'],a:"No Unity, os scripts são escritos em C#, e tudo (jogador, inimigos, itens) funciona como objetos com dados e comportamentos."},
+{k:['vantag','desvantag'],a:"Vantagens: reutilização, organização, manutenção e modularidade. Desvantagens: complexidade inicial e risco de excesso de abstração."}
+];
+const SUG=['O que é uma classe?','Para que serve o private?','Qual a diferença entre herança e polimorfismo?','Posso criar um objeto de uma classe abstrata?'];
+const msgs=$('#msgs'),inp=$('#ci');
+const hm=()=>new Date().toLocaleTimeString('pt-PT',{hour:'2-digit',minute:'2-digit'});
+const add=(who,text)=>{
+  const d=document.createElement('div');d.className='m '+who;
+  const head=`<div class="mh"><b>${who==='me'?'Eu':'Assistente'}</b><time>${hm()}</time></div><div class="bub"></div>`;
+  d.innerHTML=who==='me'?head:`<span class="av">⌘</span><div>${head}</div>`;
+  $('.bub',d).textContent=text;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d;
 };
-document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)pres(false)});
+const ask=t=>{
+  if(!t.trim())return;add('me',t);
+  const n=norm(t),f=FAQ.find(x=>x.k.some(k=>n.includes(k))),d=add('bot','…');
+  setTimeout(()=>{$('.bub',d).textContent=f?f.a:'Ainda não sei responder a isso. Pergunta-me sobre classes, objetos, encapsulamento, herança, polimorfismo, abstração, construtores ou C#.';msgs.scrollTop=msgs.scrollHeight},450);
+};
+$('#cf').onsubmit=e=>{e.preventDefault();ask(inp.value);inp.value=''};
+$('#sug').innerHTML=SUG.map(s=>`<button type="button"></button>`).join('');
+$$('#sug button').forEach((b,k)=>{b.textContent=SUG[k];b.onclick=()=>ask(SUG[k])});
+add('bot','Olá! Sou o assistente da POO. Escolhe uma pergunta ou escreve a tua.');
 
 /* Syntax highlighting + botão copiar */
 const RE=/(\/\/.*$)|("(?:[^"\\\n]|\\.)*")|\b(public|private|protected|class|abstract|virtual|override|new|return|foreach|var|in|string|int|double|void|base|if|get|set|decimal|throw)\b|\b([A-Z]\w*)\b|(\b\d+(?:\.\d+)?\b)/gm;
@@ -459,7 +465,7 @@ const copy=txt=>{
   try{document.execCommand('copy')}catch(e){}a.remove();return Promise.resolve();
 };
 $$('pre').forEach(p=>{
-  const code=p.textContent.trim();p.innerHTML=hl(code);
+  const code=p.textContent.trim();p.innerHTML=hl(code).split('\n').map(l=>`<span class="l">${l}</span>`).join('');
   const w=document.createElement('div');w.className='code';p.replaceWith(w);
   const b=document.createElement('button');b.textContent='Copiar';
   b.onclick=()=>copy(code).then(()=>{b.textContent='Copiado ✓';setTimeout(()=>b.textContent='Copiar',1500)});
@@ -521,7 +527,6 @@ function rq(){
   });
 }
 rq();
-go(0);
 })();
 </script>
 </body>
